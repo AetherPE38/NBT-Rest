@@ -5,11 +5,9 @@ declare(strict_types=1);
 namespace App\Application\Actions\v1;
 
 use App\Application\Actions\Action;
-use App\Domain\DomainException\DomainRecordNotFoundException;
 use pocketmine\nbt\LittleEndianNBTStream;
 use pocketmine\nbt\tag\CompoundTag;
 use Psr\Http\Message\ResponseInterface as Response;
-use Slim\Exception\HttpBadRequestException;
 
 class NBTAction extends Action {
 
@@ -37,7 +35,7 @@ class NBTAction extends Action {
 
             return $this->respondWithData(json_encode($array));
         } catch (\Exception $e){
-            return $this->respondWithData(null, 400);
+            return $this->respondWithData("Error while parsing lore & custom name", 400);
         }
     }
 }
