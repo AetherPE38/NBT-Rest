@@ -33,9 +33,9 @@ class NBTAction extends Action {
             }
 
 
-            return $this->respondWithData(json_encode($array));
+            return $this->respondWithData(json_encode($array))->withHeader('Content-Type', 'application/json');
         } catch (\Exception $e){
-            return $this->respondWithData("Error while parsing lore & custom name", 400);
+            return $this->res("Error while parsing lore & custom name", 400);
         }
     }
 }
