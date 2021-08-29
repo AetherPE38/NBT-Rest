@@ -25,11 +25,11 @@ class NBTAction extends Action {
             $array = ["lore" => [], "name" => ""];
 
             if($test instanceof CompoundTag) {
-                foreach ($test->getCompoundTag("display")->getListTag("Lore") as $string){
-                    $array["lore"][] = $string->getValue();
+                foreach ($test->getCompoundTag("display")->getListTag("Lore") ?? [] as $string){
+                    $array["lore"][] = str_replace("§", "&", $string->getValue());
                 }
 
-                $array["name"] = $test->getCompoundTag("display")->getString("Name");
+                $array["name"] = str_replace("§", "&", $test->getCompoundTag("display")->getString("Name" , ""));
             }
 
 
