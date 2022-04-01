@@ -24,7 +24,7 @@
     "require": {
         "php": "^7.2 || ^8.0",
         "ext-json": "*",
-        "monolog/monolog": "^2.3",
+        "monolog/monolog": "^2.4",
         "php-di/php-di": "^6.3",
         "pocketmine/nbt": "^0.2.18",
         "pocketmine/binaryutils": "^0.1.9",
