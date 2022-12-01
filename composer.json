@@ -29,7 +29,7 @@
         "pocketmine/nbt": "^0.2.18",
         "pocketmine/binaryutils": "^0.1.9",
         "slim/psr7": "^1.5",
-        "slim/slim": "^4.8"
+        "slim/slim": "^4.11"
     },
     "require-dev": {
         "jangregor/phpstan-prophecy": "^0.8.1",
